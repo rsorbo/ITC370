@@ -67,12 +67,34 @@ div.desc{
 
 /* Footer: https://www.w3schools.com/howto/howto_css_fixed_footer.asp
 */
-
-.footer{
-    position: fixed;
+#footer{
+    
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: blue;
     color: white;
     text-align: center;
+    flex-shrink: 0;
+}
+
+#page-container{
+    position: relative;
+    min-height: 100vh;
+  
+}
+
+#content-wrap{
+    flex: 1 0 auto;
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
