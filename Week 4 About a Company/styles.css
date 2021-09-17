@@ -1,0 +1,86 @@
+/*Rob Sorbo
+  ITC 370
+  Week 4 - About a Company*/
+
+
+/*https://www.w3schools.com/css/css_navbar_horizontal.asp */
+
+
+ul.nav{
+    list-style-type: none;
+    margin: auto;
+    padding:0;
+    overflow: hidden;
+    background-color: blue;
+
+}
+
+li.nav{
+    float:left;
+}
+
+li.nav a {
+    display: block;
+    color:whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.nav a:hover{
+    background-color: rgba(225, 241, 252);
+    color:black;
+}
+html, body{
+    height: 100%;
+}
+
+main{
+    position:relative;
+    padding-bottom: 100px;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding-left: 14px;
+    margin-bottom: 25px;
+}
+
+h1{
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Photo gallery https://www.w3schools.com/css/css_image_gallery.asp */
+
+
+
+/* Footer: https://www.w3schools.com/howto/howto_css_fixed_footer.asp
+*/
+#footer{
+    
+    position: absolute;
+    margin:auto;
+    bottom: 0;
+    width: 60%;
+    height: 2.5rem;
+    background-color: blue;
+    color: white;
+    text-align: center;
+ 
+}
+
+#page-container{
+    margin:auto;
+    min-height: 100vh;
+    background-color: rgb(225, 241, 252);
+    width: 60%;
+}
+
+#content-wrap{
+   padding-bottom: 2.5rem;
+}
+
