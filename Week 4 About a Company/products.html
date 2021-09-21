@@ -8,29 +8,107 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, intial-scale=1">
     </head>
+
     <body>
        
-                <div id="page-container">
-                    <div id="content-wrap">
-                        <header>
-                            <div style="background-color: rgb(0,67,117); color: whitesmoke; padding-top: 5px; ">
-                                <center><h2><i>See the world with Rob Sorbo Travel Agency</i></h2>
-                                <img src="spinning-globe-animated-gif-free-download-2-300x289.gif" height=95px ></center>
-                                <nav> <ul class="nav">
-                                    <li class="nav"><a href="index.html">Home</a></li>
-                                    <li class="nav"><a href="products.html">Packages</a></li>
-                                </ul>
-                            </div>                 
-                        
-                            </nav>
-                        </header>
+        <div id="page-container">
+            <div id="content-wrap">
+                <header>
+                    <div style="background-color: rgb(0,67,117); color: whitesmoke; padding-top: 5px; text-align: center;">
+                        <h2><i>See the world with Rob Sorbo Travel Agency</i></h2>
+                        <img src="spinning-globe-animated-gif-free-download-2-300x289.gif" height=95 alt="globe logo" >
+                        <nav> 
+                        <ul class="nav">
+                            <li class="nav"><a href="index.html">Home</a></li>
+                            <li class="nav"><a href="products.html">Packages</a></li>
+                            <li class="nav"><a href="contactus.html">Contact Us</a></li>
+                        </ul>
+                        </nav>
+                        </div>
+                </header>
+
+
+                <!-- Slideshow instructions: https://www.w3schools.com/howto/howto_js_slideshow.asp-->        
+                <!-- Slideshow container -->
+                <br/>
+                <div class="slideshow-container" style="align-items: center; text-align: center;">
+
+                    <!-- Full-width images with number and caption text -->
+                    
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="pexels-david-bartus-1571855.jpg" style="width:75%" alt="Now booking Autumn Adventures.">
+                    <div class="main">Now booking our Autumn Adventures!</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="pexels-gapeppy-2373201.jpg" style="width:65%" alt="Plan your ful-service, all-inclusive trip.">
+                    <div class="main">Book your all-inclusive trip with us! We'll cover every detail.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="pexels-meruyert-gonullu-6243229.jpg" style="width:75%" alt="Schedule an excursion.">
+                    <div class="main">Want to go on an adventure? Either schedule outings with RSTA a la carte or add them to your all-inclusive travel adventure.</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <br>
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>        
+                
+
+                <div class="main" style="text-align: center;">
+                    <p>Ready to book your adventure? <a href="mailto:rs484s@missouristate.edu?subject=I%20Need%20a%20Vacation!" style="color:rgb(0,67,117);">Click here to contact us today!</a></p>
+                </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
 
 
 
     </div>
     <footer>
         <!--copyright info: https://kerstinmartin.com/blog/copyright-notice-->
-        <p><center>Copyright &copy; <script>document.write(new Date().getFullYear())</script> | Rob Sorbo Travel Agency | All Rights Reserved | <a href="mailto:rs484s@missouristate.edu?subject=Website Contact" style="color:rgb(0,67,117);">Email Us</a></center></p>
+        <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> | Rob Sorbo Travel Agency | All Rights Reserved | <a href="mailto:rs484s@missouristate.edu?subject=Website%20Contact" style="color:rgb(0,67,117);">Email Us</a></p>
     </footer>
     </div>
      </body>
