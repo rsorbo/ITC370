@@ -28,6 +28,46 @@
                         </div>
                 </header>
                 
+<!-- Slideshow instructions: https://www.w3schools.com/howto/howto_js_slideshow.asp-->        
+                <!-- Slideshow container -->
+                <br/><br/><br/>
+                <div class="slideshow-container" style="align-items: center; text-align: center;">
+
+                    <!-- Full-width images with number and caption text -->
+                    
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="pexels-cesar-galeão-3253501.jpg" style="width:75%" alt="Now booking Autumn Adventures.">
+                    <div class="main">Get a full-body workout in our Cross Training classes</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="pexels-the-lazy-artist-gallery-2247179.jpg" style="width:65%" alt="Plan your ful-service, all-inclusive trip.">
+                    <div class="main">Need a new challenge? Register for Advanced Cross Training!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="pexels-binyamin-mellish-116077.jpg" style="width:75%" alt="Schedule an excursion.">
+                    <div class="main">Challenge yourself with BodyPump.</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <br>
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>  
+
+
                
             </div>
         </div>
@@ -36,7 +76,34 @@
                 <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> | Fit for Fun Club | All Rights Reserved | <a href="mailto:rs484s@missouristate.edu?subject=Website%20Contact" style="color:rgb(0,67,117);">Email Us</a></p>
             </footer>
         
-       
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
     </body>
    
 </html>
