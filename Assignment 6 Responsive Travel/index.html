@@ -17,9 +17,11 @@
     text-align: center;
     color: black;
 }
+    div.Container img{
+        width: 100%;
+    }
 
 div.ContainerText{
-    position:center;
     top: 8%;
     left: 15%;
 }
@@ -40,7 +42,66 @@ font-size: 15px;
 }
 }
 
-@media (min-width: 568px)
+@media (min-width: 568px){
+
+    header{
+        width: 75%;
+        margin:auto
+    }
+    
+
+    div.Container img{
+        width: 75%;
+
+    }
+    div.ContainerText{
+        top: 10%;
+        left:22.5%;
+        font-size: larger;
+        
+    }
+
+    article{
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: larger;
+    }
+
+    footer{
+        width: 75%;
+        position:static;
+        margin-left: auto;
+        margin-right: auto;
+        bottom:0;
+        
+        background-color: black;
+        color: white;
+        height: 40px;
+
+    }
+
+    footer div{
+        align-items: center;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+    footer a{
+        text-align: center;
+        color: white;
+        font-size: 14px;
+       
+        
+    }
+    footer span{
+        visibility: visible;
+        font-size: 14px;
+    }
+}
+
+
 
 </style>
 
@@ -59,18 +120,19 @@ font-size: 15px;
     </header>
 
     <div class="Container">
-        <img src="pexels-dominika-gregušová-732057.jpg" alt="Budapest Parliament building overlooking the Danube River" style="width:80%;">
+        <img src="pexels-dominika-gregušová-732057.jpg" alt="Budapest Parliament building overlooking the Danube River">
         <div class="ContainerText"><h1>Explore Beautiful Budapest</h1></div>
     </div>
 <br/>
     <article>
+        <h2>Food, History, Architecture; Budapest has it all!</h2>
         <p>Often called the "Paris of the East," Budapest is the capital city of Hungary. Conquered by both Nazi Germany to the West and USSR to the East, Budapest has history of war and resilience. Since the fall
             of the Iron Curtain, Budapest has thrived. Growing into the ninth largest city in the EU and an economic hub. 
         </p>
         <p>
             Gaze at the old-meets-new architecture, capstoned by the brilliant Parliament Building. Take a sunset cruise down the Danube River, and marvel at the beauty 
             of Budapest at night. Dip in the baths and spas. Cross the Danube, and experience the beauty of the Budapest skyline from the Fisherman's Bastion. Eat goulash
-            and with a Hungarian beer. No matter what you want to do, you can do it in Budpaset!
+            and with a Hungarian beer. No matter what you want to do, you can do it in Budapest!
         </p>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem architecto ipsa illo, eligendi consectetur labore 
@@ -81,7 +143,7 @@ font-size: 15px;
 <br/>
 <br/>
 <footer>
-    <a href="mailto:rs484s@missouristate.edu?subject=Website%20Contact">Contact us for more information</a>
+    <div><a href="mailto:rs484s@missouristate.edu?subject=Website%20Contact">Contact us for more information</a><span>      |      Copyright &copy;      |      Explore Beautiful Budapest      |</span></div>
 </footer>
 
 
