@@ -12,8 +12,7 @@ imgArray[2].src = 'pexels-burst-374885.jpg';
 imgArray[3]= new Image();
 imgArray[3].src = 'pexels-lood-goosen-1235706.jpg';
 
-imgArray[4]= new Image();
-imgArray[4].src = 'pexels-quang-anh-ha-nguyen-885021.jpg';
+
 
 function nextImage(element)
 {
@@ -33,3 +32,10 @@ function nextImage(element)
             break;
         }        
 }
+
+const thumb = document.querySelector('div');
+thumb.addEventListener('dblclick', function (nextimage)
+{
+
+});
+
