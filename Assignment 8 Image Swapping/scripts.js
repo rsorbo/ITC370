@@ -24,8 +24,8 @@ function changePic()
     index ++
     if (index == images.length){index = 0;};
 
-    mainimg.appendChild(images[index]);
+    document.getElementById("mainimg").src = images[index];
     //document.images[0].src = images[index].src;
 }
 
-document.getElementById("mainimg").addEventListener("dblclick", changePic);
+document.getElementById("mainimg").addEventListener("dblclick", changePic(mainimg));
