@@ -18,15 +18,6 @@ var index = 0;
     target.appendChild(img);
 });
  
-    var main = document.getElementById("main");
-    var mainImage = document.createElement('mainimage')
-
-    mainImage.width = '1200';
-    mainImage.src = images[index];
-    main.appendChild(mainImage);
-   
-
-
 
 function changePic()
 {
@@ -37,4 +28,4 @@ function changePic()
     //document.images[0].src = images[index].src;
 }
 
-main.addEventListener("dblclick", changePic);
+document.getElementById("mainimg").addEventListener("dblclick", changePic);
