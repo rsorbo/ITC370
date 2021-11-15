@@ -17,7 +17,7 @@ var index = 0;
     img.src = element;
     target.appendChild(img);
 });
-
+ 
     var main = document.getElementById("main");
     var mainImage = document.createElement('mainimage')
 
@@ -33,7 +33,7 @@ function changePic()
     index ++
     if (index == images.length){index = 0;};
 
-    main.appendChild(images[index]);
+    mainimg.appendChild(images[index]);
     //document.images[0].src = images[index].src;
 }
 
