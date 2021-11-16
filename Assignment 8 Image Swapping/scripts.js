@@ -28,5 +28,7 @@ function changePic()
     //document.images[0].src = images[index].src;
 }
 
-var mainimg = document.createElement("mainimg");
+var mainimg = document.getElementById("mainimg");
 mainimg.addEventListener("dblclick", changePic(mainimg));
+mainimg.width='1200';
+
