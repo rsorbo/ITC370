@@ -1,34 +1,33 @@
 
 
 
-//Bonus #1
-var images = ["pexels-chevanon-photography-324028.jpg","pexels-chevanon-photography-302899.jpg",
- "pexels-burst-374885.jpg" , "pexels-burst-374147.jpg"];
-var index = 0;    
-
-
-//Bonus #2
- var target = document.getElementById("target");
-    
- images.forEach(element => {
- var img = document.createElement("img");
-  
-    img.width = '250';
-    img.src = element;
-    target.appendChild(img);
-});
  
-
-function changePic()
-{
-    index ++;
-    if (index == images.length){index = 0;}
-
-    document.getElementById("mainimg").src = images[index];
-    //document.images[0].src = images[index].src;
-}
-
 var mainimg = document.getElementById("mainimg");
-mainimg.addEventListener("dblclick", changePic(mainimg));
-mainimg.width='1200';
 
+mainimg.addEventListener("dblclick", function() 
+{
+    var currentSet = document.getElementById('img1').src;
+
+    if (currentSet.includes("coffee"))
+        {
+        document.getElementById('mainimg').src = 'pexels-freestocksorg-405238tea.jpg';
+        document.getElementById('img1').src = 'pexels-freestocksorg-405238tea.jpg';
+        document.getElementById('img2').src = 'pexels-mareefe-1417945tea.jpg';
+        document.getElementById('img3').src = 'pexels-nikolay-osmachko-230477tea.jpg';
+        document.getElementById('img4').src = 'pexels-skitterphoto-32266tea.jpg';
+        }
+
+    if (currentSet.includes("tea"))
+        {
+        document.getElementById('mainimg').src = 'pexels-chevanon-photography-302899coffee.jpg';
+        document.getElementById('img1').src = 'pexels-chevanon-photography-302899coffee.jpg';
+        document.getElementById('img2').src = 'pexels-chevanon-photography-324028coffee.jpg';
+        document.getElementById('img3').src = 'pexels-burst-374885coffee.jpg';
+        document.getElementById('img4').src = 'pexels-burst-374147coffee.jpg';
+
+        }
+})
+
+function swapImage(image){
+    document.getElementById('mainimg').src = image;
+}
