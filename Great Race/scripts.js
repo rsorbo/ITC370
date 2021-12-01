@@ -11,10 +11,18 @@ car2.topSpeed = 8;
 car2.minSpeed = 2;
 car2.distance =0;
 
+var redCar = document.getElementById("red");
+var greenCar = document.getElementById("green");
+
 while (car1.distance<100 || car2.distance<100)
 {
-    car1.distance += Math.random(car1.minSpeed, car1.topSpeed);
-    car2.distance += Math.random(car2.minSpeed, car2.topSpeed);
+    var move1 = Math.random(car1.minSpeed, car1.topSpeed)
+    var move2 = Math.random(car2.minSpeed, car2.topSpeed)
+
+    redCar.style.left = (move1) + 'px';
+    greenCar.style.left = (move2) + 'px';
+    car1.distance += move1;
+    car2.distance += move2;
     setTimeout(500);
 }
 
