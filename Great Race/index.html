@@ -28,8 +28,14 @@
         </div>
         
     </div>
-    <div style="margin-left: 1025px; top: 0px;">
-            <img src="stop.png" height="100px" id="stop" onclick="LetsGo(document.getElementById('stop').src)">
+    <div style="margin-left: 1100px; top: 0px;">
+            <img src="stop.png" height="250px" id="stop" onclick="LetsGo(document.getElementById('stop').src)">
+            <br/>
+            <h1 id="redWin" style="visibility: hidden; color: red; margin-left: 55px; padding-left: 0;"> Red Wins!</h1>
+            <h1 id="greenWin" style="visibility: hidden; color: green; margin-left: 55px; padding-left: 0">Green Wins!</h1>
+            <h1 id="tie" style="visibility: hidden; margin-left: 55px; padding-left:0">It's a Tie!</h1>
+            
+            <input type="button" value="Reset" id="reset" style="margin-left: 100px; visibility: hidden;" onclick="Reset(document.getElementById('reset'))">
     </div>
 
 
