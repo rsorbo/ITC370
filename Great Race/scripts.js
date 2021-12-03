@@ -20,7 +20,7 @@ var move2 =0;
 //seeing if I can make it work by simplifying ... only random instead of looking at cars' min/max
 function moveRand (){
     move1 = Math.random(25, 90) + 'px';
-    move2 = Math.random(25.90) + 'px';
+    move2 = Math.random(25, 90) + 'px';
 
     redCar.style.left += move1;
     greenCar.style.left += move2;
@@ -49,7 +49,7 @@ function LetsGo(){
         // greenMove();
         moveRand(); 
 
-        setTimeout(500);
+        setTimeout(300);
     }
     
     // if (car1.distance >= 100)
